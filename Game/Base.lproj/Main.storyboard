@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rRa-Ml-T6X"/>
+                        <viewControllerLayoutGuide type="bottom" id="y3u-AD-qCR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F6x-yD-dP5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="K7f-B8-XNX">
+                                <rect key="frame" x="47.666666666666657" y="50" width="119" height="51"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyH-zl-l2D">
+                                <rect key="frame" x="86" y="59.999999999999993" width="62" height="30.666666666666664"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                <color key="textColor" red="0.99356883764266968" green="0.99370771646499634" blue="0.99352508783340454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="KPu-sq-Kp3">
+                                <rect key="frame" x="236.66666666666663" y="50" width="149" height="49"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apo-vR-EJz">
+                                <rect key="frame" x="262" y="58.999999999999993" width="70" height="30.666666666666664"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                <color key="textColor" red="0.99356883764266968" green="0.99370771646499634" blue="0.99352508783340454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-Un-2u8">
+                                <rect key="frame" x="57" y="150" width="300" height="122"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-4b-ttY">
+                                <rect key="frame" x="127" y="175" width="160" height="76.666666666666686"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="70"/>
+                                <color key="textColor" red="0.34466224908828735" green="0.1940651535987854" blue="0.07239600270986557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-wq-o5R">
+                                <rect key="frame" x="64" y="312" width="286" height="83"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="inputFieldDidChange" destination="BYZ-38-t0r" eventType="editingChanged" id="YzR-X9-vWq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sna-jR-1hD">
+                                <rect key="frame" x="59.333333333333343" y="549" width="295.33333333333326" height="87"/>
+                                <string key="text">Add 1 to each
+of the digits. 
+So, 1357 becomes 2468.</string>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" red="0.99356883764266968" green="0.99370771646499634" blue="0.99352508783340454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-n7-VCz">
+                                <rect key="frame" x="144" y="91" width="119" height="51"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-6v-4dl">
+                                <rect key="frame" x="179" y="103" width="62" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                <color key="textColor" red="0.99356883764266968" green="0.99370771646499634" blue="0.99352508783340454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qzB-4b-ttY" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="175" id="0Fi-O6-7cS"/>
+                            <constraint firstItem="lyH-zl-l2D" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="60" id="20P-1E-Z4v"/>
+                            <constraint firstAttribute="trailing" secondItem="F6x-yD-dP5" secondAttribute="trailing" id="2Vi-qa-xTw"/>
+                            <constraint firstItem="lyH-zl-l2D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-90" id="4r7-zG-hqP"/>
+                            <constraint firstAttribute="bottom" secondItem="F6x-yD-dP5" secondAttribute="bottom" id="8N3-ZR-cFc"/>
+                            <constraint firstItem="aF6-6v-4dl" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="103" id="8uM-7C-cWE"/>
+                            <constraint firstItem="aF6-6v-4dl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3" id="BCA-lP-ujj"/>
+                            <constraint firstItem="vIn-wq-o5R" firstAttribute="top" secondItem="wuh-Un-2u8" secondAttribute="bottom" constant="40" id="Fcz-AW-r2W"/>
+                            <constraint firstItem="sna-jR-1hD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMQ-CB-BYH"/>
+                            <constraint firstItem="apo-vR-EJz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="90" id="KD0-rK-dbW"/>
+                            <constraint firstItem="WA7-n7-VCz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3.5" id="L1c-vj-7Ee"/>
+                            <constraint firstItem="vIn-wq-o5R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="V4u-uh-l2J"/>
+                            <constraint firstItem="K7f-B8-XNX" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="50" id="Xe1-Ji-isU"/>
+                            <constraint firstItem="KPu-sq-Kp3" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="50" id="ZPF-UL-PYi"/>
+                            <constraint firstItem="KPu-sq-Kp3" firstAttribute="leading" secondItem="K7f-B8-XNX" secondAttribute="trailing" constant="70" id="a2k-n4-Y3c"/>
+                            <constraint firstItem="wuh-Un-2u8" firstAttribute="top" secondItem="WA7-n7-VCz" secondAttribute="bottom" constant="8" id="cTG-H9-3XK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vIn-wq-o5R" secondAttribute="trailing" constant="44" id="cUk-sy-Jrr"/>
+                            <constraint firstItem="wuh-Un-2u8" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="150" id="cgd-zc-eym"/>
+                            <constraint firstItem="y3u-AD-qCR" firstAttribute="top" secondItem="sna-jR-1hD" secondAttribute="bottom" constant="100" id="j2g-9X-mX8"/>
+                            <constraint firstItem="qzB-4b-ttY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o8T-eW-0gb"/>
+                            <constraint firstItem="F6x-yD-dP5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="py0-9J-HrN"/>
+                            <constraint firstItem="K7f-B8-XNX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="xIH-ZN-Pgi"/>
+                            <constraint firstItem="wuh-Un-2u8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xpX-Fu-t7a"/>
+                            <constraint firstItem="apo-vR-EJz" firstAttribute="top" secondItem="rRa-Ml-T6X" secondAttribute="bottom" constant="59" id="y2E-Dh-k4O"/>
+                            <constraint firstItem="F6x-yD-dP5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zfU-9t-eir"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="highscoreLabel" destination="aF6-6v-4dl" id="ilG-41-zl9"/>
+                        <outlet property="inputField" destination="vIn-wq-o5R" id="Cde-up-ZXL"/>
+                        <outlet property="numberLabel" destination="qzB-4b-ttY" id="bZu-gT-MZh"/>
+                        <outlet property="scoreLabel" destination="lyH-zl-l2D" id="sEW-Pj-abK"/>
+                        <outlet property="timeLabel" destination="apo-vR-EJz" id="9yM-gm-Vuy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.53623188405798" y="169.41964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="667"/>
+        <image name="input" width="256" height="111"/>
+        <image name="number" width="300" height="122"/>
+        <image name="score" width="119" height="51"/>
+        <image name="time" width="149" height="49"/>
+    </resources>
+</document>
